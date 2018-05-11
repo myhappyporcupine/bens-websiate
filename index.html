@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ben's Websiate</title>
+		<style>
+			body {
+				text-align: center;
+				width: 80%;
+				margin: auto;
+			}
+			h1 {
+				border: 10px solid rgb(188,54,211);
+				padding: 20px;
+				font-family: monospace;
+				color: rgb(157,58,123);
+				background-color: rgb(169,182,188);
+			}
+			h2 {
+				border: 10px dotted rgb(142,207,228);
+				padding: 10px 17px 9px 4px;
+				font-family: fantasy;
+				color: rgb(214,200,208);
+				background-color: rgb(66,30,140);
+			}
+			p {
+				border: 5px dashed rgb(163,141,131);
+				padding: 20px 10px 5px 30px;
+				font-family: cursive;
+				color: rgb(154,13,233);
+				background-color: rgb(237,148,198);
+				font-size: 18px;
+			}
+			.click {
+				border: 5px dotted rgb(11,58,110);
+				color: rgb(78,20,217);
+				padding: 10px;
+			}
+			img {
+				border: 20px inset rgb(130,175,241);
+			}
+			ul {
+				text-align: left;
+				padding: 50px;
+				font-family: monospace;
+				font-size: 2em;
+				color: rgb(54,51,180);
+				background-color: rgb(205,223,108);
+				list-style-type: "\1F44D";
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Ben's Websiate</h1>
+
+		<h2>Hello</h2>
+		<p>My name is Benson Benedict McCumberscotch. But the short version is Ben. I like cookies and chips. I have a dog that looks like this:</p>
+		<p><img id="fluffball" alt="My dog, Flufball" src="fluffball1.png"></p>
+		<p>His name is Fluffball. Please pet him. <span class="click">(CLICK!)</span></p>
+
+		<h2>Fluffball Wants To Say Something</h2>
+		<p>Grrr.... Ruff! Ruff Ruff!!!</p>
+		<p>*lick* *sniff*</p>
+
+		<h2>This Was Fluffball Saying Hello</h2>
+		<p>This Was Fluffball Saying Hello.</p>
+		
+		<h2>I am 52 and 3 quarters years young.</h2>
+		<p>I love the girl I work with. Her name is Suzzie. But Suzzanne DeMontifury Briggitte XI is the long version.</p>
+		<p>She brings me everyday:</p>
+		<ul>
+			<li>Candy</li>
+			<li>Hugs</li>
+			<li>Lollipops</li>
+		</ul>
+		<p>She will have her 92nd birthday this June.</p>
+		<p>HAPPY BIRTHDAY SUZZIE!!!</p>
+		<p><img id="suzzie" alt="My friend, Suzzie" src="suzzie1.png"></p>
+		<p>Make a wish! <span class="click">*Click Click*</span></p>
+
+		<h2>The Love of My Life</h2>
+		<p>I also have a lover, with whom I live happily ever after (tee hee hee &lt;3)</p>
+		<p>His name is The Lord of Loving. There's no short version. But I call him sweety because his lipstick tastes like gumdrops. He looks liieek this</p>
+		<p><img id="sweety" alt="The Lord of Loving" src="sweety1.png"></p>
+		<p>Give him a kiss!!! HAHAHAHA!!1 <span class="click">(omg)CLICK CLICK CLICK(omg)</span></p>
+
+		<h2>Homosexual</h2>
+		<p>I am a homosexual and I'm still in the closet. My parents don't like homosexuals.</p>
+		<p>If you tell them that, they will have a heartattack and die.</p>
+		<p>Shhhhh....</p>
+		<p>In my country, Straightville, there are no more than 3 homosexuals overall, but this is perhaps because homosexuals have death sentence so they can go to hell and burn for eternity.</p>
+		<p>But there may still be hope. When asked our president said that even in a million years there will not be homosexuals in Straightville. But after that? He didn't say :)</p>
+		<p><img id="straightville" alt="Straightville" src="straightville1.png"></p>
+		<p>Have you clicked all the images? <span class="click">clickclickclickclickclick</span></p>
+	</body>
+	<script>
+		const fluffball = document.getElementById('fluffball');
+		let fluffballState = 1;
+		fluffball.addEventListener('click', function() {
+			fluffballState = (fluffballState == 1) ? 2 : 1;
+			fluffball.src = './fluffball' + fluffballState + '.png';
+		});
+		const suzzie = document.getElementById('suzzie');
+		let suzzieState = 1;
+		suzzie.addEventListener('click', function() {
+			suzzieState = (suzzieState == 1) ? 2 : 1;
+			suzzie.src = './suzzie' + suzzieState + '.png';
+		});
+		const sweety = document.getElementById('sweety');
+		let sweetyState = 1;
+		sweety.addEventListener('click', function() {
+			sweetyState = (sweetyState == 1) ? 2 : 1;
+			sweety.src = './sweety' + sweetyState + '.png';
+		});
+		const straightville = document.getElementById('straightville');
+		let straightvilleState = 1;
+		straightville.addEventListener('click', function() {
+			straightvilleState = (straightvilleState == 1) ? 2 : 1;
+			straightville.src = './straightville' + straightvilleState + '.png';
+		});
+	</script>
+</html>

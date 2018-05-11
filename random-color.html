@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Color Generator</title>
+	</head>
+	<body>
+		<button id="generate">generate</button>
+		<button id="reset">reset</button>
+		<ul id="colors"></ul>
+	</body>
+	<script>
+		const generateButton = document.getElementById('generate');
+		const resetButton = document.getElementById('reset');
+		const colorsList = document.getElementById('colors');
+		function generateColor() {
+			const r = Math.floor(Math.random() * 256);
+			const g = Math.floor(Math.random() * 256);
+			const b = Math.floor(Math.random() * 256);
+			return 'rgb(' + r + ',' + g + ',' + b + ')';
+		}
+		generateButton.addEventListener('click', function() {
+			const randomColor = generateColor();
+			const newListItem = document.createElement('li');
+			newListItem.textContent = randomColor;
+			newListItem.style.color = randomColor;
+			colorsList.appendChild(newListItem);
+		});
+		resetButton.addEventListener('click', function() {
+			colorsList.innerHTML = '';
+		});
+	</script>
+</html>
